@@ -10,7 +10,7 @@ st.title('Приложуха')
 
 st.subheader('Вывести пасажиров с указанным возрастом:')
 
-p_by_age = st.slider('Возраст', 30, 60,0)
+p_by_age = st.slider('Возраст', 30, 60)
 filtered_data = core.find_men_by_age(p_by_age)
 st.map(filtered_data)
 
