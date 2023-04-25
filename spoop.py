@@ -11,7 +11,7 @@ st.title('Приложуха');
 
 st.subheader('Вывести пасажиров с указанным возрастом:');
 
-p_by_age = st.slider('Возраст', value=(30, 60));
+p_by_age = st.slider('Возраст', 30, 60, value=(30, 60));
 filtered_data = core.find_men_by_age(p_by_age[0], p_by_age[1]);
 st.dataframe(filtered_data);
 
