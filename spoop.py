@@ -15,11 +15,11 @@ filtered_data = core.find_men_by_age(p_by_age)
 st.map(filtered_data)
 
 
-# st.subheader('Имена пасажиров, стоймость билета которых выше:')
-#
-# ticket_cost = st.number_input('Стоимость билета:')
-# filtered_data =
-# st.map(filtered_data)
+st.subheader('Имена пасажиров, стоймость билета которых выше:')
+
+ticket_cost = st.number_input('Стоимость билета:')
+filtered_data = core.get_names_by_fare(ticket_cost)
+st.map(filtered_data)
 
 
 st.subheader('Класс, имя и возраст спасенных, имя которых начинается с:')
