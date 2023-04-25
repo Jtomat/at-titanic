@@ -14,6 +14,6 @@ class app_functions:
             self.dataFrame['Age'] == age]
         return data_slice[['Name', 'Age', 'Pclass']]
 
-    def get_names(self, fare: int) -> pd.DataFrame:
+    def get_names_by_fare(self, fare: int) -> pd.DataFrame:
         data_slice: pd.DataFrame = self.dataFrame.loc[self.dataFrame["Fare"] > fare]
         return data_slice[["Name"]]
