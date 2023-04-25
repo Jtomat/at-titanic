@@ -1,5 +1,6 @@
 import pandas as pd
 
+
 class AppFunctions:
     dataFrame: pd.DataFrame
 
@@ -8,7 +9,7 @@ class AppFunctions:
 
     def find_men_by_age(self, age: int) -> pd.DataFrame:
         if age > 60 or age < 30:
-            return Exception('Age out of range [30; 60]');
+            return Exception('Age out of range [30; 60]')
         data_slice: pd.DataFrame = self.dataFrame.loc[self.dataFrame['Sex'] == 'male'].loc[
             self.dataFrame['Age'] == age]
         return data_slice[['Name', 'Age', 'Pclass']]
