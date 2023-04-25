@@ -21,5 +21,5 @@ class AppFunctions:
 
     def find_passengers_by_name_start(self, name_start: str) -> pd.DataFrame:
         data_slice: pd.DataFrame = self.dataFrame\
-            .loc[self.dataFrame['Name'].startwith(name_start)]
+            .loc[self.dataFrame['Name'].str.startswith(name_start)]
         return data_slice[['Name', 'Age', 'Pclass']]
