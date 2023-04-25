@@ -1,7 +1,6 @@
 import pandas as pd
 
-
-class app_functions:
+class AppFunctions:
     dataFrame: pd.DataFrame
 
     def __init__(self):
@@ -17,3 +16,8 @@ class app_functions:
     def get_names_by_fare(self, fare: int) -> pd.DataFrame:
         data_slice: pd.DataFrame = self.dataFrame.loc[self.dataFrame["Fare"] > fare]
         return data_slice[["Name"]]
+
+    def find_passengers_by_name_start(self, name_start: str) -> pd.DataFrame:
+        data_slice: pd.DataFrame = \
+            self.dataFrame.loc[self.dataFrame['Name'].startwith(name_start)]
+        return data_slice[['Name', 'Age', 'Pclass']]
