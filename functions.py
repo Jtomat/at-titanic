@@ -4,7 +4,7 @@ import pandas as pd
 class AppFunctions(object):
     dataFrame: pd.DataFrame
     
-    def __init__(self, source: str):
+    def __init__(self, source: str = None):
         if source is not None:
             self.dataFrame = pd.read_csv(source)
         else:

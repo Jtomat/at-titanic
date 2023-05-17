@@ -2,7 +2,15 @@
 from functions import AppFunctions
 import pandas as pd
 
-test_data_frame = pd.DataFrame()
+
+test_age_data_frame = pd.DataFrame({
+    "PassengerId": [1],
+    "Pclass": [3],
+    "Name": ["Braund, Mr. Owen Harris"],
+    "Sex": ["male"],
+    "Age": [32],
+})
+
 
 def test_data_source_read():
     """
@@ -10,11 +18,12 @@ def test_data_source_read():
     """
     instance = AppFunctions('./assets/data.csv')
     assert instance.dataFrame is not None
-    
-    
-def test_find_men_by_age():
+
+
+def test_find_men_by_age(test_data: pd.DataFrame = test_age_data_frame, age_min: int = 30, age_max: int = 40):
     """
-    Метод для проверки поиска мужчин в возрастном диапозоне
+    Метод для проверки поиска мужчин в возрастном диапозоне.
     """
-    assert True
-    
+    instance = AppFunctions()
+    instance.dataFrame = test_data
+    assert instance.find_men_by_age(age_min, age_max)["Name"][0] == "Braund, Mr. Owen Harris"
