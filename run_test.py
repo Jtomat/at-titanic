@@ -44,5 +44,3 @@ def test_find_passengers_by_name_start(test_data: pd.DataFrame = test_name_start
     assert res["Name"][0] == "Cumings, Mrs. John Bradley (Florence Briggs Thayer)" \
     and res["Age"][0] == 20 \
     and res["Pclass"][0] == 1
-
-test_find_passengers_by_name_start()
