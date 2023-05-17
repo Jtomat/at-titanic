@@ -1,5 +1,6 @@
 import pandas as pd
 
+
 class AppFunctions(object):
 
     dataFrame: pd.DataFrame
