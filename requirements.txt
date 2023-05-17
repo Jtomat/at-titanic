@@ -1,0 +1,8 @@
+streamlit
+numexpr
+numpy
+packaging
+pandas
+python-dateutil
+pytz
+six
