@@ -9,12 +9,12 @@ class AppFunctions:
 
     def find_men_by_age(self, age_min: int, age_max) -> pd.DataFrame:
         if age_max > 60 or age_min < 30:
-            return Exception('Age out of range [30; 60]');
+            return Exception('Age out of range [30; 60]')
         data_slice: pd.DataFrame = self.dataFrame\
             .loc[(self.dataFrame['Sex'] == 'male') &
                  (self.dataFrame['Age'] >= age_min) &
-                 (self.dataFrame['Age'] <= age_max)];
-        return data_slice[['Name', 'Age', 'Pclass']];
+                 (self.dataFrame['Age'] <= age_max)]
+        return data_slice[['Name', 'Age', 'Pclass']]
 
     def get_names_by_fare(self, fare: int) -> pd.DataFrame:
         data_slice: pd.DataFrame = self.dataFrame.loc[self.dataFrame["Fare"] > fare]
