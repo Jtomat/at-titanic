@@ -1,10 +1,6 @@
 # Импорты: тестовый клиент и экземпляр самого приложения
-from fastapi.testclient import TestClient
 from functions import AppFunctions
 import pandas as pd
-
-# Создаем экземпляр тестового клиента на базе приложения
-client = TestClient(app)
 
 test_data_frame = pd.DataFrame()
 
