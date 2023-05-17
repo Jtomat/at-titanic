@@ -2,7 +2,6 @@ import pandas as pd
 
 
 class AppFunctions(object):
-
     dataFrame: pd.DataFrame
     
     def __init__(self, source: str = None):
@@ -19,7 +18,7 @@ class AppFunctions(object):
                  (self.dataFrame['Age'] >= age_min) &
                  (self.dataFrame['Age'] <= age_max)]
         return data_slice[['Name', 'Age', 'Pclass']]
-
+    
     def get_names_by_fare(self, fare: int) -> pd.DataFrame:
         data_slice: pd.DataFrame = self.dataFrame.loc[self.dataFrame["Fare"] > fare]
         return data_slice[["Name"]]
