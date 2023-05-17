@@ -4,11 +4,11 @@ import pandas as pd
 
 
 test_age_data_frame = pd.DataFrame({
-    "PassengerId": [1],
-    "Pclass": [3],
-    "Name": ["Braund, Mr. Owen Harris"],
-    "Sex": ["male"],
-    "Age": [32],
+    "PassengerId": [1,2,3,5],
+    "Pclass": [3,1,0,2],
+    "Name": ["Braund, Mr. Owen Harris", "Madison Braun", "Steve Craftson", "Harry Fox"],
+    "Sex": ["male", "male", "female","female"],
+    "Age": [32, 20, 44,35],
 })
 
 
