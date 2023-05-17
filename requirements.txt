@@ -1,6 +1,4 @@
-mkl-fft
-mkl-random
-mkl-service
+streamlit
 numexpr
 numpy
 packaging
