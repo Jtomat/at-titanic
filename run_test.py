@@ -41,7 +41,7 @@ def test_find_men_by_age(test_data: pd.DataFrame = test_age_data_frame, age_min:
     assert instance.find_men_by_age(age_min, age_max)["Name"][0] == "Braund, Mr. Owen Harris"
 
 
-def test_find_passengers_by_name_start(test_data: pd.DataFrame = test_name_start_data_frame , name_start: str = "Cumings"):
+def test_find_passengers_by_name_start(test_data: pd.DataFrame = test_name_start_data_frame, name_start: str = "Cumings"):
     """
     Метод для проверки поиска мужчин в возрастном диапозоне.
     """
@@ -49,8 +49,8 @@ def test_find_passengers_by_name_start(test_data: pd.DataFrame = test_name_start
     instance.dataFrame = test_data
     res = instance.find_passengers_by_name_start(name_start)
     assert res["Name"][0] == "Cumings, Mrs. John Bradley (Florence Briggs Thayer)" \
-    and res["Age"][0] == 20 \
-    and res["Pclass"][0] == 1
+        and res["Age"][0] == 20 \
+        and res["Pclass"][0] == 1
 
 
 def test_get_names_by_fare(test_data: pd.DataFrame = test_fare_data_frame, fare: float = 7):
